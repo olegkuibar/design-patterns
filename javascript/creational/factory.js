@@ -159,32 +159,6 @@ class VehicleFactory {
   createMotorcycle() {
     return new Motorcycle();
   }
-  /**
-   * Create a new vehicle with a given type and props
-   * @param {*} type
-   * @param { Vehicle } props
-   * @param props.wheels - number of wheels
-   * @param props.color - color of vehicle
-   * @param props.doors - number of doors
-   * @param props.year - year of vehicle
-   * @param props.price - price of vehicle
-   * @returns {Vehicle}
-   * @example
-   * const vehicle = new Creator().createVehicle("car", {
-   *  color: "red",
-   *  doors: 4,
-   *  year: "2020",
-   *  price: "$100k",
-   * });
-   *
-   * @returns
-   */
-  createVehicle(type, props) {
-    return new Vehicle({
-      type,
-      ...props,
-    });
-  }
 }
 
 // Create a new vehicle factory
@@ -198,11 +172,3 @@ const truck = factory.createTruck();
 
 // Create a new motorcycle
 const motorcycle = factory.createMotorcycle();
-
-// Create a new vehicle with custom props
-const vehicle = factory.createVehicle("car", {
-  color: "red",
-  doors: 4,
-  year: "2020",
-  price: "$100k",
-});
